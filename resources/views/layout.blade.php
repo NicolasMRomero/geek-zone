@@ -51,15 +51,18 @@
             <li class="nav-item">
               <a class="nav-link" href="">Contacto</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="perfil.php" style="">Mi Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ingresar.php" style="">Ingresar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="registrarse.php" style="">Registrarse</a>
-            </li>
+            @guest
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}" style="">Ingresar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('register') }}" style="">Registrarse</a>
+              </li>
+            @else
+              <li class="nav-item">
+                <a class="nav-link" href="perfil.php" style="">Mi Perfil</a>
+              </li>
+            @endguest
               </ul>
                 </div>
               <div class="col-lg-2"  style="text-align:center">

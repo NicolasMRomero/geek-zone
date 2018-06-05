@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/portada', 'IndexController@pepito');
+Route::get('/portada', 'IndexController@index');
 
 Auth::routes();
 
