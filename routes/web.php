@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/portada', 'IndexController@index');
+Route::get('/index', 'IndexController@index')->name('index');
 Route::get('/faq', 'IndexController@faq')->name('faq');
 Route::get('/profile', 'IndexController@profile')->name('profile');
 

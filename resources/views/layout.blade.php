@@ -27,7 +27,7 @@
         <div class="col-lg-5 collapse navbar-collapse" id="navbarSupportedContent" style="text-align:left">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="{{ route('index') }}">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -47,9 +47,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href='{{ route('faq') }}'>FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Contacto</a>
             </li>
             @guest
               <li class="nav-item">
