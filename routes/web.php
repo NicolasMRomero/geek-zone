@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('/portada', 'IndexController@index');
 Route::get('/faq', 'IndexController@faq')->name('faq');
+Route::get('/profile', 'IndexController@profile')->name('profile');
+
 
 
 Auth::routes();

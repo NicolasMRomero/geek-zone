@@ -46,21 +46,21 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
+              <a class="nav-link" href='{{ route('faq') }}'>FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">Contacto</a>
             </li>
             @guest
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}" style="">Ingresar</a>
+                <a class="nav-link" href="{{ route('login') }}" style="">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}" style="">Registrarse</a>
+                <a class="nav-link" href="{{ route('register') }}" style="">Register</a>
               </li>
             @else
               <li class="nav-item">
-                <a class="nav-link" href="perfil.php" style="">Mi Perfil</a>
+                <a class="nav-link" href="{{ route('profile') }}" style="">Profile</a>
               </li>
             @endguest
               </ul>

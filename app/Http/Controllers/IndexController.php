@@ -16,5 +16,9 @@ class IndexController extends Controller
       return view('faq');
 }
 
+public function profile()
+{
+    return view('profile');
+}
 
 }
