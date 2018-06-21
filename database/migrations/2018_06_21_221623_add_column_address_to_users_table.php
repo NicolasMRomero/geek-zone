@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnCityToUsersTable extends Migration
+class AddColumnAddressToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,9 @@ class AddColumnCityToUsersTable extends Migration
     public function up()
     {
       Schema::table('users', function(Blueprint $table){
-        $table->string('city');
+        $table->string('address')->after('email');;
       });
+
     }
 
     /**
@@ -25,8 +26,8 @@ class AddColumnCityToUsersTable extends Migration
      */
     public function down()
     {
-      Schema::table('users', function(Blueprint $table){
-        $table->string('city');
+        Schema::table('users', function (Blueprint $table) {
+        $table->dropColumn('address');
       });
     }
 }

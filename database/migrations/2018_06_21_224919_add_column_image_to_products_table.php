@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForeignKeyForUsersWithProducts extends Migration
+class AddColumnImageToProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateForeignKeyForUsersWithProducts extends Migration
      */
     public function up()
     {
-      Schema::table('products', function (Blueprint $table) {
-      $table->unsignedInteger('user_id');
-      $table->foreign('user_id')->references('id')->on('users');
-    });
-  }
+      Schema::table('products', function(Blueprint $table){
+        $table->string('image')->after('price');;
+      });
+    }
 
     /**
      * Reverse the migrations.
@@ -27,7 +26,7 @@ class CreateForeignKeyForUsersWithProducts extends Migration
     public function down()
     {
       Schema::table('products', function (Blueprint $table) {
-        $table->dropForeign('products_user_id_foreign');
-      });
+      $table->dropColumn('image');
+    });
     }
 }
