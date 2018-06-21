@@ -19,8 +19,12 @@ Route::get('/index', 'IndexController@index')->name('index');
 Route::get('/faq', 'IndexController@faq')->name('faq');
 Route::get('/profile', 'IndexController@profile')->name('profile');
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('auth')->group(function () {
+
+  Route::resource('product', 'ProductController');
+
+});
