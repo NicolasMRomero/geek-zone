@@ -11,8 +11,8 @@ class Product extends Model
   protected $guarded = [];
 
   // Del archivo de Jeff
-  // public function user()
-  // {
-  //     return $this->belongsTo(User::class);
-  // }
+  public function user()
+   {
+       return $this->belongsTo(User::class);
+   }
 }
