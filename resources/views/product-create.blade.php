@@ -61,6 +61,29 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="category_id" class="col-form-label col-md-12">Categoría</label>
+
+            <div class="col-md-12">
+
+                <select
+                  id="category_id"
+                  class="form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}"
+                  name="category_id"
+                  requiresd>
+
+                  @foreach ($categories as $category)
+                    <option value="{{ $category->id}}">{{ $category->name}}</option>
+                  @endforeach
+                </select>
+
+                @if ($errors->has('category_id'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('category_id') }}</strong>
+                    </span>
+                @endif
+            </div>
+        </div>
 
         <div class="form-group">
             <label for="image" class="col-form-label col-md-12">Image</label>

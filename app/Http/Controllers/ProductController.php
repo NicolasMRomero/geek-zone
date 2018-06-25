@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Categoryq;
 
 class ProductController extends Controller
 {
@@ -22,7 +23,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product-create');
+        $categories = Category::all();
+        return view('product-create', compact('categories'));
     }
 
     /**
@@ -37,7 +39,8 @@ class ProductController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required|int',
-            // 'image' => 'image'
+            'category_id' => 'required|int',
+            'image' => 'image'
         ]);
 
         $file = $request->file("image");
@@ -51,6 +54,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
+            'category_id' => $request->category_id,
             'image' => $path
         ]);
 
