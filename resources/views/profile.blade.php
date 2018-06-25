@@ -13,9 +13,23 @@
 
             </div>
             <ul class="list-group menu-perfil">
-              <a href="#" class="opcion-menu" ><li class="list-group-item ">Mis Ventas</li></a>
-              <a href="#" class="opcion-menu" ><li class="list-group-item">Mis Compras</li></a>
-              <a href="{{ route('logout') }}" class="opcion-menu" ><li class="list-group-item ">CERRAR SESIÓN</li></a>
+              <a href="#" class="opcion-menu" >
+                <li class="list-group-item ">Mis Ventas</li>
+              </a>
+              <a href="#" class="opcion-menu" >
+                <li class="list-group-item">Mis Compras</li>
+              </a>
+              <a href="#" class="opcion-menu">
+                <li>
+                  <form class="" action="{{ url('/logout') }}" method="POST">
+                    {{ csrf_field() }}
+                    <button type="submit" name="button" class="btn ">
+                      CERRAR SESIÓN
+                    </button>
+                  </form>
+                </li>
+              </a>
+
             </ul>
           </div>
         <div class="card-datos col-xs-12 col-lg-9">
