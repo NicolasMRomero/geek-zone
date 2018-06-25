@@ -43,7 +43,7 @@
                             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
                             <div class="col-md-6">
-                                <select class="form-control{{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" value="{{ old('country') }}" id="countries">  </select>
+                                <select class="form-control{{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" value="{{ old('country') }}" id="countries"> <option value="">Elegí</option></select>
 
                                 @if ($errors->has('country'))
                                     <span class="invalid-feedback">
@@ -123,94 +123,89 @@
 var selectCountries = document.querySelector('#countries');
 var selectStates = document.querySelector('#states');
 var selectCities = document.querySelector('#cities');
-//selectStates.style.display = 'none';
-//selectCities.style.display = 'none';
+selectStates.style.display = 'none';
+selectCities.style.display = 'none';
 
 var urlCountries = 'http://pilote.techo.org/?do=api.getPaises';
-var urlStates = 'http://pilote.techo.org/?do=api.getRegiones?idPais=[idPais]';
-var urlCities = ' http://pilote.techo.org/?do=api.getCiudades?idRegionLT=[idRegionLT]';
+var urlStates ='http://pilote.techo.org/?do=api.getRegiones?idPais=';
+var urlCities = 'http://pilote.techo.org/?do=api.getCiudades?idRegionLT=';
 
 pedidoAJAX(urlCountries, cargarCountries);
 
 function pedidoAJAX(url, callback){
-fetch(url)
+  fetch(url)
 
-  .then(function(response){
-  return response.json();
-  })
+      .then(function(response){
+      return response.json();
+      })
 
-    .then(function(data){
-     var data = data.contenido;
+      .then(function(data){
+       var data = data.contenido;
 
-    callback(data)
-  })
+        callback(data)
+      })
 
-  .catch(function(error){
-  console.error(`ERROR: ${error}`);
-  });
+      .catch(function(error){
+      console.error(`ERROR: ${error}`);
+      });
 
 };
 
 function cargarCountries(countries){
 
-for (var n in countries){
-var option = `<option
-value = "${countries[n].alpha2code}"> ${n} </option>`;
-selectCountries.innerHTML += option;
-}
-
-selectCountries.onchange = function () {
-  var idPais = this.value;
-
-  if (!idPais) {
-      selectStates.style.display = 'none';
-      selectCities.style.display = 'none';
-    } else {
-      selectStates.style.display = 'block';
+  for (var n in countries){
+    var option = `<option
+    value = "${countries[n]}"> ${n} </option>`;
+    selectCountries.innerHTML += option;
     }
 
-  if(selectStates.hasChildNodes()) {
-    selectStates.innerHTML = '';
-  }
-  if(selectStates.hasChildNodes())  {
-    selectCities.innerHTML = '';
-  }
+    selectCountries.onchange = function () {
+      var idPais = this.value;
+
+        if (!idPais) {
+            selectStates.style.display = 'none';
+            selectCities.style.display = 'none';
+          } else {
+            selectStates.style.display = 'block';
+          }
+
+        if(selectStates.hasChildNodes()) selectStates.innerHTML = '';
+
+        if(selectStates.hasChildNodes()) selectCities.innerHTML = '';
+
 
   pedidoAJAX(urlStates + idPais, cargarStates);
-
-};
+    };
 }
 
 function cargarStates(states){
 
-for (var n in states){
-var option = `<option
-value = "${states[n].alpha2code}"> ${n} </option>`;
-selectStates.innerHTML += option;
-}
+  for (var n in states){
+    var option = `<option
+    value = "${states[n]}"> ${n} </option>`;
+    selectStates.innerHTML += option;
+    }
 
-selectStates.onchange = function () {
-  var idRegion = this.value;
+    selectStates.onchange = function () {
+      var idRegion = this.value;
 
-  selectCities.style.display = 'block';
+      selectCities.style.display = 'block';
 
-  if(selectCities.hasChildNodes()) {
-    selectCities.innerHTML = '';
-  }
+      if(selectCities.hasChildNodes()) selectCities.innerHTML = '';
 
-  pedidoAJAX(urlCities + idRegion, cargarCities);
-};
+
+    pedidoAJAX(urlCities + idRegion, cargarCities);
+  };
+
 }
 
 function cargarCities (cities) {
-for (var n in cities) {
-  var option = `<option value="${cities[n].alpha2code}"> ${n} </option>`;
-  selectCities.innerHTML += option;
+    for (var n in cities) {
+      var option = `<option value="${cities[n]}"> ${n} </option>`;
+      selectCities.innerHTML += option;
+    }
 }
-}
+
 </script>
-
-
-
 
 @endsection
