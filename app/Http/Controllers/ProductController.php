@@ -50,6 +50,8 @@ class ProductController extends Controller
 
         $path = $file->storePubliclyAs("images", $name);
 
+
+
         auth()->user()->products()->create([
             'name' => $request->name,
             'description' => $request->description,

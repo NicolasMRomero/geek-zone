@@ -11,14 +11,18 @@
 |
 */
 
+// home
 Route::get('/', 'IndexController@index')->name('index');
+// faq
 Route::get('/faq', 'IndexController@faq')->name('faq');
 
+// profile => user
+Route::get('/profile', 'UserController@profile')->name('profile');
+
+// login y register
 Auth::routes();
 
+//productos
 Route::middleware('auth')->group(function () {
-
-  Route::get('/profile', 'IndexController@profile')->name('profile');
-  Route::resource('product', 'ProductController');
-
-});
+    Route::resource('product', 'ProductController');
+    });

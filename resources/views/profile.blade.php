@@ -38,10 +38,11 @@
           </div>
           <div class="card-datos">
            <ul >
-              <li>Nombre de Usuario: <p></p></li>
-              <li>Correo Electrónico:<p></p> </li>
-              <li>Dirección: <p></p> </li>
-              <li>Editar Contraseña: <a href="#">Modificar</a> </li>
+              <li>Name: <p> {{ Auth::user()->name }}</p></li>
+              <li>Email:<p> {{ Auth::user()->email }}</p> </li>
+              <form class="" action="{{ route('password.email') }}" method="POST">
+              <li>Password: <a class="btn-links" href="{{ route('password.request') }}">clic here</a> </li>
+            </form>
               </ul>
           </div>
           <div class="col-12">
@@ -82,5 +83,7 @@
         </div>
       </div>
   </section>
+  <script src="{{ asset('js/app.js') }}" defer></script>
+
 
 @endsection

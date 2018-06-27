@@ -43,21 +43,23 @@
                 <a class="dropdown-item" href="#">Funko</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Tienda Geek</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Todos los productos</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href='{{ route('faq') }}'>FAQ</a>
+              <a class="nav-link" href='{{ ('faq') }}'>FAQ</a>
             </li>
             @guest
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}" style="">Login</a>
+                <a class="nav-link" href="{{ ('login') }}" style="">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}" style="">Register</a>
+                <a class="nav-link" href="{{ ('register') }}" style="">Register</a>
               </li>
             @else
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('profile') }}" style="">Profile</a>
+                <a class="nav-link" href="{{ ('profile') }}" style="">Profile</a>
               </li>
             @endguest
               </ul>
@@ -111,6 +113,9 @@
                 <p>
                     <a class="link-footer" href="#!">Tienda Geek</a>
                 </p>
+                <p>
+                    <a class="link-footer" href="#!">Todos los productos</a>
+                </p>
             </div>
 
             <div class="col-md-4 col-lg-3 col-xl-3 mb-4">
@@ -143,6 +148,8 @@
 
       <script src="js/jquery-3.3.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="{{ asset('js/app.js') }}" defer></script>
+
 
     </body>
   </html>
