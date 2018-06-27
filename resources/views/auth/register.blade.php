@@ -8,7 +8,7 @@
                 <div class="card-header" style="color:white; text-align:center">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -170,26 +170,32 @@ function cargarCountries(countries){
 
   for (var n in countries){
     var option = `<option
-    value = "${countries[n]}"> ${n} </option>`;
+    value = "${n}"> ${n} </option>`;
     selectCountries.innerHTML += option;
     }
 
     selectCountries.onchange = function () {
-      var idPais = this.value;
+      // var idPais = this.value;
+      //
+      //   if (!idPais) {
+      //       selectStates.style.display = 'none';
+      //       selectCities.style.display = 'none';
+      //     } else {
+      //       selectStates.style.display = 'block';
+      //     }
 
-        if (!idPais) {
-            selectStates.style.display = 'none';
-            selectCities.style.display = 'none';
-          } else {
-            selectStates.style.display = 'block';
+      if(selectStates.hasChildNodes()) selectStates.innerHTML = '';
+
+      if(selectStates.hasChildNodes()) selectCities.innerHTML = '';
+
+          if (this.value == 'Argentina') {
+            pedidoAJAX(urlStates + 1, cargarStates);
           }
 
-        if(selectStates.hasChildNodes()) selectStates.innerHTML = '';
-
-        if(selectStates.hasChildNodes()) selectCities.innerHTML = '';
 
 
-  pedidoAJAX(urlStates + idPais, cargarStates);
+
+
     };
 }
 

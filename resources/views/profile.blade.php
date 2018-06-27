@@ -7,7 +7,7 @@
   <section class="container-avatar">
        <div class="row">
           <div class="card col-xs-12 col-lg-3 pr-3" style="width: 18rem;">
-            <img class="card-img-top imagen-perfil" src="" alt="Card image cap">
+            <img class="card-img-top imagen-perfil" src="/storage/usuarios/{{ Auth::user()->image }}" alt="Card image cap">
             <div class="card-body">
               <h5 class="perfil-nombre"></h5>
 
@@ -50,14 +50,16 @@
           </div>
           <div class="row productos">
             <div class="col-12 col-md-4 col-lg-4">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top img-prod-en-perfil" src="images/star-wars/robot-BB-8.jpeg" alt="BB-8">
-                <div class="card-body">
-                  <h5 class="card-title">BB-8</h5>
-                  <p class="card-text">Robot BB-8, 2-In-1 - Star Wars The Last Jedi.</p>
-                  <a href="#" class="btn btn-primary">Editar Producto</a>
+              @foreach ($products as $product)
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-prod-en-perfil" src="images/star-wars/robot-BB-8.jpeg" alt="BB-8">
+                  <div class="card-body">
+                    <h5 class="card-title">BB-8</h5>
+                    <p class="card-text">Robot BB-8, 2-In-1 - Star Wars The Last Jedi.</p>
+                    <a href="#" class="btn btn-primary">Editar Producto</a>
+                  </div>
                 </div>
-              </div>
+              @endforeach
             </div>
             <div class="col-12 col-md-4 col-lg-4">
               <div class="card" style="width: 18rem;">

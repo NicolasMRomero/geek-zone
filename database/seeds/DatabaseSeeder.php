@@ -13,10 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // factory(User::class)->times(30)->create();
-        // factory(Product::class)->times(30)->create();
 
-        // Del archivo de Jeff
         factory(User::class)->times(10)->create()->each(function ($user) {
             factory(Product::class)->times(10)->create([
                 'user_id' => $user->id
