@@ -20,10 +20,10 @@
                 <li class="list-group-item">Mis Compras</li>
               </a>
               <a href="#" class="opcion-menu">
-                <li>
+                <li class="list-group-item">
                   <form class="" action="{{ url('/logout') }}" method="POST">
                     {{ csrf_field() }}
-                    <button type="submit" name="button" class="btn ">
+                    <button type="submit" name="button" class="btn btn-link">
                       CERRAR SESIÓN
                     </button>
                   </form>
