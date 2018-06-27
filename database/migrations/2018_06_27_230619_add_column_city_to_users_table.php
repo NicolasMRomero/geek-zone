@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RenameColumnAddressToState extends Migration
+class AddColumnCityToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class RenameColumnAddressToState extends Migration
      */
     public function up()
     {
-      Schema::table('users', function (Blueprint $table) {
-        $table->renameColumn('address', 'state');
+      Schema::table('users', function(Blueprint $table){
+        $table->string('city')->after('state');;
       });
     }
 
@@ -26,7 +26,7 @@ class RenameColumnAddressToState extends Migration
     public function down()
     {
       Schema::table('users', function (Blueprint $table) {
-        $table->renameColumn('address', 'state');
-      });
+      $table->dropColumn('city');
+    });
     }
 }
