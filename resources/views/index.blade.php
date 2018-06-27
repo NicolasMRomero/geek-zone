@@ -144,6 +144,7 @@
       </div>
     </div>
 
+
     </div>
 </section>
 <!--newsletter-->
@@ -152,19 +153,29 @@
     <div class="row">
     <div class="col-12 text-center">
       <form method="post">
+          {{ csrf_field() }}
         <div class="form-group">
          <label for="exampleInputEmail1">
            <h6 class="font-weight-bold">
                <strong>Suscribite a nuestro newsletter</strong>
-           </h6></label>
-           <input type="email" class="form-control form-newsletter" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresá tu email" name="email" value="">
+           </h6> </label>
+           <input id="email" type="email" class="form-newsletter form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Ingresá tu email">
 
-            <br>
-          <button type="submit" class="btn btn-primary">ENVIAR</button>
+           @if ($errors->has('email'))
+               <span class="invalid-feedback">
+                   <strong>{{ $errors->first('email') }}</strong>
+               </span>
+           @endif
+       </div>
+          <button type="submit" class="btn btn-primary">YEAH!</button>
         </div>
       </form>
     </div>
   </div>
   </div>
 </section>
+
+<script src="{{ asset('js/app.js') }}" defer></script>
+
+
 @endsection
