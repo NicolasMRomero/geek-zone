@@ -13,15 +13,15 @@
 
             </div>
             <ul class="list-group menu-perfil">
-              <a href="#" class="opcion-menu" >
-                <li class="list-group-item ">Mis Ventas</li>
+              <a href="/product/create" class="opcion-menu" >
+                <li class="list-group-item ">CREAR PRODUCTO</li>
               </a>
-              <a href="#" class="opcion-menu" >
-                <li class="list-group-item">Mis Compras</li>
+              <a href="/product" class="opcion-menu" >
+                <li class="list-group-item">VER PRODUCTOS</li>
               </a>
               <a href="#" class="opcion-menu">
                 <li class="list-group-item">
-                  <form class="" action="{{ url('/logout') }}" method="POST">
+                  <form class="" action="{{ url('/logout') }}" method="get">
                     {{ csrf_field() }}
                     <button type="submit" name="button" class="btn btn-link">
                       CERRAR SESIÓN

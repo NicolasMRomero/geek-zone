@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <a href="/product/create" class="btn btn-primary">Create new</a>
+        <a href="/product/create" class="btn btn-primary">CREATE NEW</a>
 
         <table class="table table-striped table-bordered">
             <thead>
@@ -10,6 +10,9 @@
                     <td>Name</td>
                     <td>Price</td>
                     <td>Description</td>
+                    <td>Image</td>
+
+
                     <!--acá habría que darle estilo modal o como queramos que se muestren los productos!-->
                 </tr>
             </thead>
@@ -19,20 +22,18 @@
                     <td>{{ $product->name }}</td>
                     <td> $ {{ $product->price / 100 }} </td>
                     <td>{{ $product->description }}</td>
+                    <td>{{ $product->image }}</td>
+
 
                     <td>
-                        <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">edit</a>
-
-
-
+                      <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">EDIT</a>
                         <form method="POST" action="/product/{{$product->id}}">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" href="/product/{{$product->id}}/edit">delete</button>
-                        </form>
-
-
-                   </td>
+                          @csrf
+                          @method('DELETE')
+                          <button type="submit" class="btn btn-danger btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
+                          <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}">VIEW</a>
+                      </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
