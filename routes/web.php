@@ -12,7 +12,7 @@
 */
 
 // home
-Route::get('/', 'IndexController@index')->name('index');
+Route::get('/index', 'IndexController@index')->name('index');
 // faq
 Route::get('/faq', 'IndexController@faq')->name('faq');
 

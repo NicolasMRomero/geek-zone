@@ -4,7 +4,7 @@
 
 		<div class="col-12 col-md-4 col-lg-4">
 			<div class="card" style="width: 18rem;">
-				<img class="card-img-top img-prod-en-perfil" src="/storage/images/{{ $product->image }}" alt="mochila-starwars">
+				<img class="card-img-top img-prod-en-perfil" src="/storage/images/{{ $product->image }}" alt="{{ $product->name }}">
 				<div class="card-body">
 					<h5 class="card-title">{{ $product->name }}</h5>
 					<p class="card-text"> $ {{ $product->price }}</p>

@@ -43,7 +43,6 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Tienda Geek</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Todos los productos</a>
               </div>
             </li>
             <li class="nav-item">
@@ -64,7 +63,7 @@
               </ul>
                 </div>
               <div class="col-lg-2"  style="text-align:center">
-              <a class="navbar-brand logo-menu" href="index.php"><img src="images/logo-E.png" alt="logo-E"></a>
+              <a class="navbar-brand logo-menu" href="{{ route('index') }}"><img src="images/logo-E.png" alt="logo-E"></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>

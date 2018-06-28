@@ -265,6 +265,10 @@ function cargarCountries(countries){
 
           if (this.value == 'Argentina') {
             pedidoAJAX(urlStates + 1, cargarStates);
+          } else{
+
+            selectStates.style.display = 'none';
+              selectCities.style.display = 'none';
           }
 
 
