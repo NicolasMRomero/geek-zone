@@ -134,6 +134,81 @@
 </div>
 
 <script type="text/javascript">
+
+  var form = document.forms[1],
+      elements = form.elements;
+
+  var validateName = function(e){
+    if (form.name.value == 0) {
+      alert('nombre vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validateEmail = function(e){
+    if (form.email.value == 0) {
+      alert('email vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validateCountry = function(e){
+    if (form.country.value == 0) {
+      alert('country vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validateState = function(e){
+    if (form.state.value == 0) {
+      alert('state vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validateCity = function(e){
+    if (form.city.value == 0) {
+      alert('city vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validatePassword = function(e){
+    if (form.password.value == 0) {
+      alert('password vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validatePasswordConfirmation = function(e){
+    if (form.password_confirmation.value == 0) {
+      alert('password confirmation vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validateImage = function(e){
+    if (form.image.value == 0) {
+      alert('image vacio');
+      e.preventDefault();
+    }
+  };
+
+  var validate = function(e){
+    validateName(e);
+    validateEmail(e);
+    validateCountry(e);
+    validateState(e);
+    validateCity(e);
+    validatePassword(e);
+    validatePasswordConfirmation(e);
+    validateImage(e);
+  };
+
+  form.addEventListener("submit", validate);
+
+
+
 // AJAX para select de provincias Cities y Countries
 var selectCountries = document.querySelector('#countries');
 var selectStates = document.querySelector('#states');
