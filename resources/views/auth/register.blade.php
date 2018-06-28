@@ -131,12 +131,14 @@
             </div>
         </div>
     </div>
-</div>
+</div>x
 
 <script type="text/javascript">
 
   var form = document.forms[1],
       elements = form.elements;
+
+  var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   var validateName = function(e){
     if (form.name.value == 0) {
@@ -148,6 +150,10 @@
   var validateEmail = function(e){
     if (form.email.value == 0) {
       alert('email vacio');
+      e.preventDefault();
+    }
+    else if (!emailRegex.test(form.email.value)) {
+      alert('email invalido');
       e.preventDefault();
     }
   };
