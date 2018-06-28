@@ -53,9 +53,9 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
             'country' => 'required|string',
-            'state' => 'required|string',
-            'city' => 'required|string',
-            'image' => 'required|mimes:jpeg,jpg,png',
+            'state' => 'string',
+            'city' => 'string',
+            'image' => 'mimes:jpeg,jpg,png',
 
         ]);
     }

@@ -22,10 +22,21 @@ class DatabaseSeeder extends Seeder
           'Tienda Geek'
         ];
 
+
+        foreach ($categories as $category) {
+          DB::table('categories')->insert(
+            [
+              'name'=>$category
+            ]
+          );
+        }
+        
+
         factory(User::class)->times(10)->create()->each(function ($user) {
             factory(Product::class)->times(10)->create([
                 'user_id' => $user->id
             ]);
         });
+
     }
 }

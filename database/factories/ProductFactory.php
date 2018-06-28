@@ -5,9 +5,9 @@ use App\Product;
 
 $factory->define(Product::class, function (Faker $faker) {
     return [
-        'name' => $faker->sentence,
-        'description' => $faker->paragraph(50),
+        'name' => $faker->word(10),
+        'description' => $faker->sentence,
         'price' => $faker->numberBetween(1, 2000),
-        'category_id' => $faker->numberBetween(1, 10),
+        'category_id' => $faker->numberBetween(1, 5),
     ];
 });

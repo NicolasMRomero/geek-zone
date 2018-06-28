@@ -51,8 +51,13 @@
           <div class="row productos">
             <div class="col-12 col-md-4 col-lg-4">
               @foreach ($products as $product)
+
                 <div class="card" style="width: 18rem;">
-                  <img class="card-img-top img-prod-en-perfil" src="images/star-wars/robot-BB-8.jpeg" alt="BB-8">
+                  <img class="card-img-top img-prod-en-perfil" src="@if (file_exists(public_path().'/img/'.$product->image))
+                      <img src="{{ asset('img/'.$product->image) }}">
+                  @else
+                      <img src="{{ asset('img/logo.gif') }}">
+                  @endif" alt="BB-8">
                   <div class="card-body">
                     <h5 class="card-title">BB-8</h5>
                     <p class="card-text">Robot BB-8, 2-In-1 - Star Wars The Last Jedi.</p>
