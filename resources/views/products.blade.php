@@ -10,6 +10,9 @@
                     <td>Name</td>
                     <td>Price</td>
                     <td>Description</td>
+                    <td>Image</td>
+
+
                     <!--acá habría que darle estilo modal o como queramos que se muestren los productos!-->
                 </tr>
             </thead>
@@ -21,19 +24,16 @@
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->image }}</td>
 
+
                     <td>
-                        <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">EDIT</a>
-
-
-
+                      <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">EDIT</a>
                         <form method="POST" action="/product/{{$product->id}}">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
-                        </form>
-
-
-                   </td>
+                          @csrf
+                          @method('DELETE')
+                          <button type="submit" class="btn btn-danger btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
+                          <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}">VIEW</a>
+                      </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
