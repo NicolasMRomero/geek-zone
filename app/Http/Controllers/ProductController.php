@@ -48,7 +48,7 @@ class ProductController extends Controller
         // Armo un nombre único para este archivo
         $name = str_slug($request->name) . "_" . time() . '.' . $file->extension();
 
-        $path = $file->storePubliclyAs("images", $name);
+        $path = $file->storePubliclyAs("/public/pdtos", $name);
 
 
 
@@ -57,7 +57,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'price' => $request->price,
             'category_id' => $request->category_id,
-            'image' => $path
+            'image' => $name
         ]);
 
         return redirect()->to('/product')->with('message', 'Product created');

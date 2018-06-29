@@ -21,7 +21,7 @@
               </a>
               <a href="#" class="opcion-menu">
                 <li class="list-group-item">
-                  <form class="" action="{{ url('/logout') }}" method="get">
+                  <form class="" action="{{ url('/logout') }}" method="post">
                     {{ csrf_field() }}
                     <button type="submit" name="button" class="btn btn-link">
                       CERRAR SESIÓN
@@ -50,21 +50,22 @@
           </div>
           <div class="row productos">
             <div class="col-12 col-md-4 col-lg-4">
-              @foreach ($products as $product)
+            @foreach ($products as $product)
 
                 <div class="card" style="width: 18rem;">
-                  <img class="card-img-top img-prod-en-perfil" src="@if (file_exists(public_path().'/img/'.$product->image))
-                      <img src="{{ asset('img/'.$product->image) }}">
+
+                  @if (!$product->image)
+                    <img class="card-img-top img-prod-en-perfil" src="/images/default.png" width="100" alt="">
                   @else
-                      <img src="{{ asset('img/logo.gif') }}">
-                  @endif" alt="BB-8">
+                    <img src="/storage/pdtos/{{ $product->image }}" width="100"  alt="">
+                  @endif
                   <div class="card-body">
                     <h5 class="card-title">BB-8</h5>
                     <p class="card-text">Robot BB-8, 2-In-1 - Star Wars The Last Jedi.</p>
                     <a href="#" class="btn btn-primary">Editar Producto</a>
                   </div>
                 </div>
-              @endforeach
+                @endforeach
             </div>
             <div class="col-12 col-md-4 col-lg-4">
               <div class="card" style="width: 18rem;">
@@ -90,7 +91,6 @@
         </div>
       </div>
   </section>
-  <script src="{{ asset('js/app.js') }}" defer></script>
 
 
 @endsection

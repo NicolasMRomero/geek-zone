@@ -7,12 +7,12 @@
     <meta name="keywords" content="Star wars, Transformers, The Simpsons, Funko, Tienda Geeks">
     <meta name="author" content="Pau, Gise, Nico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Styles -->
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
@@ -46,24 +46,24 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href='{{ ('faq') }}'>FAQ</a>
+              <a class="nav-link" href='{{ route('faq') }}'>FAQ</a>
             </li>
             @guest
               <li class="nav-item">
-                <a class="nav-link" href="{{ ('login') }}" style="">Login</a>
+                <a class="nav-link" href="{{ route('login') }}" style="">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ ('register') }}" style="">Register</a>
+                <a class="nav-link" href="{{ route('register') }}" style="">Register</a>
               </li>
             @else
               <li class="nav-item">
-                <a class="nav-link" href="{{ ('profile') }}" style="">Profile</a>
+                <a class="nav-link" href="{{ route('profile') }}" style="">Profile</a>
               </li>
             @endguest
               </ul>
                 </div>
               <div class="col-lg-2"  style="text-align:center">
-              <a class="navbar-brand logo-menu" href="{{ route('index') }}"><img src="images/logo-E.png" alt="logo-E"></a>
+              <a class="navbar-brand logo-menu" href="{{ route('index') }}"><img src="/images/logo-E.png" alt="logo-E"></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -144,8 +144,8 @@
     </footer>
     <!--/.Copyright -->
 
-      <script src="js/jquery-3.3.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+       <script src="/js/jquery-3.3.1.min.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
       <script src="{{ asset('js/app.js') }}" defer></script>
 
 

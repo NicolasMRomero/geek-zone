@@ -11,9 +11,7 @@
                     <td>Price</td>
                     <td>Description</td>
                     <td>Image</td>
-
-
-                    <!--acá habría que darle estilo modal o como queramos que se muestren los productos!-->
+                    <td>Edit</td>
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +20,13 @@
                     <td>{{ $product->name }}</td>
                     <td> $ {{ $product->price / 100 }} </td>
                     <td>{{ $product->description }}</td>
-                    <td>{{ $product->image }}</td>
+                    <td>
+                      @if (!$product->image)
+                        <img src="/images/default.png" width="100" alt="">
+                      @else
+                        <img src="/storage/pdtos/{{ $product->image }}" width="100"  alt="">
+                      @endif
+                    </td>
 
 
                     <td>

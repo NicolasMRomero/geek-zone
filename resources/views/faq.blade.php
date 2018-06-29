@@ -3,7 +3,7 @@
 @section('content')
 
 <div class "container productos-ppal">
-<img class= "banner-faq" src="images/banner-funkos.jpg" alt="faq">
+<img class= "banner-faq" src="/images/banner-funkos.jpg" alt="faq">
 <h1 class="titulo-principal">PREGUNTAS FRECUENTES</h1>
 <div class="container-accordion">
   <div id="accordion" role="tablist">
@@ -134,7 +134,8 @@
 </div>
 </div>
 
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="{{ asset('js/app.js') }}" defer></script>
-
 
 @endsection
