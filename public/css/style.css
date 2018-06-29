@@ -277,6 +277,21 @@ footer{
  padding-top: 50%;
  }
 
+.btn-primary{
+	margin: 0;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,.125);
+	color: #2E4053;
+	padding: .75rem 1.25rem;
+	text-align: left;
+}
+
+.btn-primary:hover{
+	color: white;
+	background-color: #603260;
+}
+
+}
 
 /*media queries*/
 

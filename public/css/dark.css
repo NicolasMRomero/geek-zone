@@ -35,13 +35,28 @@ body{
 }
 .productos{
   margin-top: 30px;
+	color: white;
 }
 footer{
-  background-color: #cecece;
+  background-color: #292929cc;
   padding-top: 10px;
+	color: white;
+}
+
+.link-footer{
+	color: white;
 }
 .card-title{
   font-size: 20px;
+	color: #212529;
+}
+
+.firma{
+	color: black;
+}
+
+.card-text{
+	color: #212529;
 }
 .container{
 	margin-top: 5%;
@@ -180,6 +195,7 @@ footer{
 
 .card-datos ul li {
 	font-weight: bold;
+	color: white;
 }
 
 .card-datos ul li p{
@@ -205,6 +221,7 @@ footer{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2.35em;
+	color: white;
 }
 
 .perfil-nombre{
@@ -277,30 +294,22 @@ footer{
  padding-top: 50%;
  }
 
- .bg-light {
-     background-color: rgba(0,123,255,.7)!important;
- }
-
- .navbar-light .navbar-nav .nav-link {
-    color: white;
+.btn-primary{
+	margin: 0;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,.125);
+	color: #2E4053;
+	padding: .75rem 1.25rem;
+	text-align: left;
 }
 
-footer {
-    background-color: #3a3a3a;
-		color: white;
-}
-
-.link-footer{
+.btn-primary:hover{
 	color: white;
+	background-color: #007bff;
 }
 
-.firma, .firma>a{
-	color: black;
 }
 
-body{
-	color: white;
-}
 /*media queries*/
 
 @media (max-width:500px) {

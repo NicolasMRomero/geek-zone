@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-perfil">
- <img class="banner-perfil" src="/images/banner-death-star.png" alt="perfil">
+ <img class="banner-perfil" src="/images/banner-death-star.jpg" alt="perfil">
   </div>
   <section class="container-avatar">
        <div class="row">
@@ -10,7 +10,6 @@
             <img class="card-img-top imagen-perfil" src="/storage/usuarios/{{ Auth::user()->image }}" alt="Card image cap">
             <div class="card-body">
               <h5 class="perfil-nombre"></h5>
-
             </div>
             <ul class="list-group menu-perfil">
               <a href="/product/create" class="opcion-menu" >
@@ -19,31 +18,33 @@
               <a href="/product" class="opcion-menu" >
                 <li class="list-group-item">VER PRODUCTOS</li>
               </a>
-              <button id="stylesheet1" > Default Style Sheet </button>
-              <button id="stylesheet2" > Dark Style Sheet </button>
-              <a href="#" class="opcion-menu">
-                <li class="list-group-item">
-                  <form class="" action="{{ url('/logout') }}" method="post">
-                    {{ csrf_field() }}
-                    <button type="submit" name="button" class="btn btn-link">
-                      CERRAR SESIÓN
-                    </button>
-                  </form>
-                </li>
-              </a>
-
+              <button id="stylesheet1" class=" btn btn-primary">DEFAULT THEME</button>
+              <button id="stylesheet2" class="btn btn-primary">DARK THEME</button>
+              <br>
+              <form class="" action="{{ url('/logout') }}" method="post">
+                {{ csrf_field() }}
+                <input class="btn btn-primary" type="submit" value="CERRAR SESION">
+              </form>
             </ul>
           </div>
         <div class="card-datos col-xs-12 col-lg-9">
           <div class="col-12">
             <h2 class="titulo-perfil">Datos Personales</h2>
+            <br>
           </div>
-          <div class="card-datos">
-           <ul >
-              <li><h4>Name: {{ Auth::user()->name }}</h4></li>
-              <br>
-              <li><h4>Email: {{ Auth::user()->email }}</h4> </li>
+          <div class="row">
+            <div class="card-datos col-6">
+              <ul >
+                <li><h4><strong> Name:</strong> {{ Auth::user()->name }}</h4></li>
+                <li><h4> <strong>Email:</strong> {{ Auth::user()->email }}</h4> </li>
               </ul>
+            </div>
+            <div class="card-datos col-6">
+              <ul >
+                <li><h4> <strong>Country:</strong> {{ Auth::user()->country }}</h4></li>
+                <li><h4> <strong>State:</strong> {{ Auth::user()->state }}</h4> </li>
+              </ul>
+            </div>
           </div>
           <div class="col-12">
             <h1 class="text-center productos">MIS PRODUCTOS</h1>
