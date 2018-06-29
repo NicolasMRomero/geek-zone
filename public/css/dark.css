@@ -1,0 +1,325 @@
+* {
+	box-sizing: border-box;
+}
+ul, ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+img {
+	width: 100%;
+}
+a {
+	display: inline-block;
+	text-decoration: none;
+  color: #2E4053;
+}
+body{
+	background-image: url(../images/star-wars-bg.jpg);
+  font-size: 1em;
+  font-family: 'Exo 2', sans-serif;
+}
+.titulo-principal{
+	text-align: center;
+	text-decoration: underline;
+	padding: 30px;
+}
+.container-accordion {
+	padding-bottom: 20px;
+}
+.body-forms{
+	background-image:url(../images/star-wars-bg.jpg);
+}
+.encabezado{
+  margin-top: 30px;
+}
+.productos{
+  margin-top: 30px;
+}
+footer{
+  background-color: #cecece;
+  padding-top: 10px;
+}
+.card-title{
+  font-size: 20px;
+}
+.container{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.titulo{
+  font-size: 2em;
+  padding-bottom: 5%;
+	padding-top: 5%;
+}
+/* FORM LOGIN Y REGISTRO*/
+.form-control{
+  border-radius: 5px;
+  border: solid 1px #99A3A4;
+  font-size: 1em;
+  box-shadow: 0 8px 23px 0px rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+	width: 75%;
+}
+.form-group-input{
+  color: #2E4053;
+  font-weight: bold;
+  line-height: 1.5;
+	padding: 10px;
+	padding-left: 15%;
+}
+.form-group{
+  margin: 0 auto;
+	width: 100%;
+}
+.form-text{
+	padding-left: 15%;
+}
+/* ICONS LOGIN FCBK Y GOOGLE*/
+ .titulo-icons{
+  width: 100%;
+  display: block;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 20px;
+}
+.btn-fcbk{
+    color: #fff;
+    background-color: #3b5998;
+}
+.btn-fcbk i{
+  font-size: 30px;
+  margin-right: 5px;
+  padding-bottom: 3px;
+}
+.btn-fcbk, .btn-google{
+  font-size: 18px;
+  line-height: 1.2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px;
+	margin: 5px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0 8px 23px 0px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+	width: 100px;
+}
+.card-header{
+	background-color: #007bff;
+}
+.card-header h5 a{
+	color: white;
+	text-decoration: none;
+}
+.card{
+	width: 100% !important;
+		margin-bottom: 20px;
+}
+.titulo-principal{
+	text-decoration: none;
+}
+.buscar, .btn, .botones-portada {
+	background-color: #007bff;
+	border: none;
+}
+.btn{
+	color: #ffff;
+}
+.buscar:hover, .btn:hover{
+	background-color: #797979;
+	border: none;
+}
+.acordeones{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.nav-item{
+	font-weight: 600;
+}
+.carousel-control-prev-icon{
+	color: #007bff;
+}
+.carousel-caption{
+	background-color: #464647b3;
+}
+.carousel-caption h5{
+	font-size: 3.55rem;
+}
+.carousel-caption p{
+	font-size: 1.55rem;
+}
+.form-newsletter{
+	width: 50%;
+}
+.btn-primary{
+	background-color: #007bff;
+	border: none;
+	margin-left: 0;
+	margin: 15px;
+}
+.btn-primary:hover{
+	background-color: #797979;
+	border: none;
+}
+.link-footer{
+	text-decoration: none !important;
+}
+.logo-menu{
+	width: 80px;
+}
+/* PERFIL */
+.container-avatar {
+	padding: 5%;
+	margin: 50px;
+	border: solid 2px #797979;
+}
+
+.card-datos ul li {
+	font-weight: bold;
+}
+
+.card-datos ul li p{
+	font-weight: lighter;
+	display: inline;
+}
+
+.card-datos ul li a{
+	font-weight: lighter;
+	display: inline;
+	text-decoration: none;
+}
+
+.imagen-avatar {
+	width: 250px;
+	margin-top: 20px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px #555
+}
+
+.titulo-perfil{
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.35em;
+}
+
+.perfil-nombre{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.imagen-perfil{
+	margin-top: 20px;
+}
+
+.menu-perfil{
+	margin-bottom: 20px;
+}
+
+.opcion-menu:hover{
+	text-decoration: none;
+}
+
+.opcion-menu:hover li{
+	color: white;
+	background-color: #007bff;
+}
+
+.lista-mis-productos{
+	background-color: #c3c3c3;
+}
+
+.card-perfil-productos{
+	margin-top: 20px;
+}
+
+.titulo-producto{
+	font-size: 2.35em;
+	font-weight: bold;
+}
+
+.img-prod-en-perfil{
+	width: 8em;
+	margin:  20px auto;
+}
+
+.agregar-al-carrito{
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+
+}
+
+.agregar-al-carrito:hover {
+  color: black;
+  background-color: #c3c3c3;
+  border-color: #c3c3c3;
+}
+/*index db */
+
+.container-portada{
+	background-image: url(../images/portada-dark.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.buttons {
+ display: flex;
+ justify-content: space-around;
+ position: absolute;
+ width: 100%;
+ padding-top: 50%;
+ }
+
+ .bg-light {
+     background-color: rgba(0,123,255,.7)!important;
+ }
+
+ .navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+footer {
+    background-color: #3a3a3a;
+		color: white;
+}
+
+.link-footer{
+	color: white;
+}
+
+.firma, .firma>a{
+	color: black;
+}
+
+body{
+	color: white;
+}
+/*media queries*/
+
+@media (max-width:500px) {
+	.productos{
+		display: none;
+	}
+ .slider{
+		display: none !important;
+	}
+}
+
+@media (min-width:980px) {
+	video{
+		margin-top: 5%;
+	}
+}
+@media (min-width:981px) {
+	video{
+		margin-top: 6%;
+		margin-bottom: 6%;
+	}
+}

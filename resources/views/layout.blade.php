@@ -11,7 +11,7 @@
     <!-- Styles -->
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link id="stylesheet" href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
@@ -132,10 +132,10 @@
           </div>
     <!-- Copyright-->
     <div class="container-copyright" style="background-color:white;">
-      <div class="row">
+      <div class="row firma">
           <div class="col-12 footer-copyright  pt-2 pb-2 text-center">
         Diseñado y programado por:
-        <a class="link-footer" href="#">
+        <a class="link-footer firma" href="#">
             <strong> Pau, Gise y Nico</strong>
         </a>
           </div>
@@ -144,7 +144,7 @@
     </footer>
     <!--/.Copyright -->
 
-       <script src="/js/jquery-3.3.1.min.js"></script>
+      <script src="/js/jquery-3.3.1.min.js"></script>
       <script src="/js/bootstrap.min.js"></script>
       <script src="{{ asset('js/app.js') }}" defer></script>
 

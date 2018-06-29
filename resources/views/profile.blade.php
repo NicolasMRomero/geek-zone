@@ -19,6 +19,8 @@
               <a href="/product" class="opcion-menu" >
                 <li class="list-group-item">VER PRODUCTOS</li>
               </a>
+              <button id="stylesheet1" > Default Style Sheet </button>
+              <button id="stylesheet2" > Dark Style Sheet </button>
               <a href="#" class="opcion-menu">
                 <li class="list-group-item">
                   <form class="" action="{{ url('/logout') }}" method="post">
@@ -91,6 +93,24 @@
         </div>
       </div>
   </section>
+
+  <script type="text/javascript">
+
+    function changestylesheet(sheet){
+      var stylesheet = document.getElementById('stylesheet');
+      stylesheet.setAttribute('href', sheet);
+    }
+
+    function initate() {
+    var style1 = document.getElementById("stylesheet1");
+    var style2 = document.getElementById("stylesheet2");
+
+    style1.onclick = function () { changestylesheet("{{ asset('css/style.css') }}") };
+    style2.onclick = function () { changestylesheet("{{ asset('css/dark.css') }}"); };
+    }
+
+    window.onload = initate;
+  </script>
 
 
 @endsection
