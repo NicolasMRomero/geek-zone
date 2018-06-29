@@ -51,9 +51,7 @@
           </div>
           <div class="row productos">
             <div class="col-12 col-md-4 col-lg-4">
-
                 <div class="card" style="width: 18rem;">
-
                     <img class="card-img-top img-prod-en-perfil" src="/images/star-wars/robot-BB-8.jpeg" width="100" alt="">
                   <div class="card-body">
                     <h5 class="card-title">BB-8</h5>
