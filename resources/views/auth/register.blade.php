@@ -131,7 +131,7 @@
             </div>
         </div>
     </div>
-</div>x
+</div>
 
 <script type="text/javascript">
 

@@ -36,6 +36,9 @@
                           @method('DELETE')
                           <button type="submit" class="btn btn-danger btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
                           <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}">VIEW</a>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Zoom
+                      </button>
                       </form>
                     </td>
                 </tr>
@@ -44,6 +47,24 @@
         </table>
 
         {{ $products->links() }}
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            @if (!$product->image)
+              <img src="/images/default.png" width="100" alt="">
+            @else
+              <img src="/storage/pdtos/{{ $product->image }}" width="100"  alt="">
+            @endif
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript">
