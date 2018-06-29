@@ -70,5 +70,9 @@
     <script type="text/javascript">
       pag = document.getElementsByTagName('ul')[1];
       pag.setAttribute('class', 'pagination justify-content-center');
+
+      function Back() {
+        window.history.back();
+      }
     </script>
 @endsection
