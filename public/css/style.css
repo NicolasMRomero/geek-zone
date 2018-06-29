@@ -291,6 +291,14 @@ footer{
 	background-color: #603260;
 }
 
+.page-item.active .page-link{
+	background-color: #603260;
+	border-color: #603260;
+}
+
+.page-link{
+	color: #603260;
+}
 }
 
 /*media queries*/
