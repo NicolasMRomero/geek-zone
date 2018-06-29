@@ -40,11 +40,9 @@
           </div>
           <div class="card-datos">
            <ul >
-              <li>Name: <p> {{ Auth::user()->name }}</p></li>
-              <li>Email:<p> {{ Auth::user()->email }}</p> </li>
-              <form class="" action="{{ route('password.email') }}" method="POST">
-              <li>Password: <a class="btn-links" href="{{ route('password.request') }}">clic here</a> </li>
-            </form>
+              <li><h4>Name: {{ Auth::user()->name }}</h4></li>
+              <br>
+              <li><h4>Email: {{ Auth::user()->email }}</h4> </li>
               </ul>
           </div>
           <div class="col-12">
@@ -52,22 +50,16 @@
           </div>
           <div class="row productos">
             <div class="col-12 col-md-4 col-lg-4">
-            @foreach ($products as $product)
 
                 <div class="card" style="width: 18rem;">
 
-                  @if (!$product->image)
-                    <img class="card-img-top img-prod-en-perfil" src="/images/default.png" width="100" alt="">
-                  @else
-                    <img src="/storage/pdtos/{{ $product->image }}" width="100"  alt="">
-                  @endif
+                    <img class="card-img-top img-prod-en-perfil" src="/images/star-wars/robot-BB-8.jpeg" width="100" alt="">
                   <div class="card-body">
                     <h5 class="card-title">BB-8</h5>
                     <p class="card-text">Robot BB-8, 2-In-1 - Star Wars The Last Jedi.</p>
                     <a href="#" class="btn btn-primary">Editar Producto</a>
                   </div>
                 </div>
-                @endforeach
             </div>
             <div class="col-12 col-md-4 col-lg-4">
               <div class="card" style="width: 18rem;">

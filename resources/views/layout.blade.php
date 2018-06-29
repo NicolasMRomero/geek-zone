@@ -59,7 +59,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('profile') }}" style="">Profile</a>
               </li>
+          
             @endguest
+
               </ul>
                 </div>
               <div class="col-lg-2"  style="text-align:center">
@@ -111,9 +113,7 @@
                 <p>
                     <a class="link-footer" href="#!">Tienda Geek</a>
                 </p>
-                <p>
-                    <a class="link-footer" href="#!">Todos los productos</a>
-                </p>
+
             </div>
 
             <div class="col-md-4 col-lg-3 col-xl-3 mb-4">
