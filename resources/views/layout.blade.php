@@ -42,7 +42,6 @@
                 <a class="dropdown-item" href="#">Funko</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Tienda Geek</a>
-                <div class="dropdown-divider"></div>
               </div>
             </li>
             <li class="nav-item">
@@ -59,7 +58,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('profile') }}" style="">Profile</a>
               </li>
-          
+              <li class="nav-item">
+                <a class="nav-link" href="/product" style="">My Products</a>
+              </li>
             @endguest
 
               </ul>
@@ -147,7 +148,9 @@
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script src="/js/bootstrap.min.js"></script>
       <script src="{{ asset('js/app.js') }}" defer></script>
-
+      <script type="text/javascript">
+        $('.dropdown-toggle').dropdown()
+      </script>
 
     </body>
   </html>

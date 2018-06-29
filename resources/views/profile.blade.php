@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-perfil">
- <img class="banner-perfil" src="images/banner-death-star.png" alt="perfil">
+ <img class="banner-perfil" src="/images/banner-death-star.png" alt="perfil">
   </div>
   <section class="container-avatar">
        <div class="row">
@@ -56,8 +56,8 @@
                     <img class="card-img-top img-prod-en-perfil" src="/images/star-wars/robot-BB-8.jpeg" width="100" alt="">
                   <div class="card-body">
                     <h5 class="card-title">BB-8</h5>
-                    <p class="card-text">Robot BB-8, 2-In-1 - Star Wars The Last Jedi.</p>
-                    <a href="#" class="btn btn-primary">Editar Producto</a>
+                    <p class="card-text">Robot BB-8, 2-In-1 Star Wars The Last Jedi.</p>
+                    <a href="/product/create"  class="btn btn-primary">Edit Product</a>
                   </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Funko Darth Vader</h5>
                   <p class="card-text">Funko holográfico de Darth Vader.</p>
-                  <a href="#" class="btn btn-primary">Editar Producto</a>
+                  <a href="/product/create" class="btn btn-primary">Edit Product</a>
                 </div>
               </div>
             </div>
@@ -76,8 +76,8 @@
                 <img class="card-img-top img-prod-en-perfil" src="images/star-wars/mochila.jpeg" alt="mochila-starwars">
                 <div class="card-body">
                   <h5 class="card-title">Mochila Star Wars</h5>
-                  <p class="card-text">Mochila estampada Star Wars The Last Jedi.</p>
-                  <a href="#" class="btn btn-primary">Editar Producto</a>
+                  <p class="card-text">Mochila estampada The Last Jedi.</p>
+                  <a href="/product/create"  class="btn btn-primary">Edit Product</a>
                 </div>
               </div>
             </div>

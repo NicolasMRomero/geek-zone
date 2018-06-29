@@ -4,14 +4,14 @@
     <div class="container">
         <a href="/product/create" class="btn btn-primary">CREATE NEW</a>
         <button type="button" class="btn btn-success" onclick="Back()">VOLVER</button>
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered" border="0" width="100%" align="center">
             <thead>
-                <tr>
+                <tr style="text-align:center">
                     <td>Name</td>
                     <td>Price</td>
                     <td>Description</td>
                     <td>Image</td>
-                    <td>Edit</td>
+                    <td></td>
                 </tr>
             </thead>
             <tbody>
@@ -36,9 +36,7 @@
                           @method('DELETE')
                           <button type="submit" class="btn btn-danger btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
                           <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}">VIEW</a>
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Zoom
-                      </button>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">ZOOM</button>
                       </form>
                     </td>
                 </tr>

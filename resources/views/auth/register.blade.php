@@ -220,8 +220,7 @@
 var selectCountries = document.querySelector('#countries');
 var selectStates = document.querySelector('#states');
 var selectCities = document.querySelector('#cities');
-// selectStates.style.display = 'none';
-// selectCities.style.display = 'none';
+
 
 var urlCountries = 'http://pilote.techo.org/?do=api.getPaises';
 var urlStates ='http://pilote.techo.org/?do=api.getRegiones?idPais=';
@@ -274,13 +273,9 @@ function cargarCountries(countries){
             pedidoAJAX(urlStates + 1, cargarStates);
           } else{
 
-            selectStates.style.display = 'none';
+              selectStates.style.display = 'none';
               selectCities.style.display = 'none';
           }
-
-
-
-
 
     };
 }
