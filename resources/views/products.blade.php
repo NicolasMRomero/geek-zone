@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <a href="/product/create" class="btn btn-primary">CREATE NEW</a>
-        <button type="button" class="btn btn-success" onclick="Back()">VOLVER</button>
+        <button type="button" class="btn btn-primary" onclick="Back()">VOLVER</button>
         <table class="table table-striped table-bordered" border="0" width="100%" align="center">
             <thead>
                 <tr style="text-align:center">
@@ -34,10 +34,9 @@
                         <form method="POST" action="/product/{{$product->id}}">
                           @csrf
                           @method('DELETE')
-                          <button type="submit" class="btn btn-danger btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
+                          <button type="submit" class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
                           <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}">VIEW</a>
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">ZOOM</button>
-                      </form>
+                          </form>
                     </td>
                 </tr>
                 @endforeach
@@ -47,23 +46,7 @@
         {{ $products->links() }}
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            @if (!$product->image)
-              <img src="/images/default.png" width="100" alt="">
-            @else
-              <img src="/storage/pdtos/{{ $product->image }}" width="100"  alt="">
-            @endif
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <script type="text/javascript">
       pag = document.getElementsByTagName('ul')[1];
