@@ -45,9 +45,9 @@
 
         {{ $products->links() }}
     </div>
+
     <script type="text/javascript">
-    function Back() {
-      window.history.back();
-    }
+      pag = document.getElementsByTagName('ul')[1];
+      pag.setAttribute('class', 'pagination justify-content-center');
     </script>
 @endsection
