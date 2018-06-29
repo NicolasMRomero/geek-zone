@@ -9,10 +9,10 @@
         @csrf
 
         @method('PUT')
-        <h1 style="text-align:center">UPDATE PRODUCT</h1>
+        <h1 style="text-align:center">MODIFICAR</h1>
 
         <div class="form-group">
-            <label for="name" class="col-form-label col-md-12" style="text-align:center">Name</label>
+            <label for="name" class="col-form-label col-md-12" style="text-align:center">Nombre</label>
 
             <div class="col-md-12">
                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $product->name) }}" required autofocus>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            <label for="description" class="col-form-label col-md-12" style="text-align:center">Description</label>
+            <label for="description" class="col-form-label col-md-12" style="text-align:center">Descripción</label>
 
             <div class="col-md-12">
                 <textarea
@@ -45,7 +45,7 @@
         </div>
 
         <div class="form-group">
-            <label for="price" class="col-form-label col-md-12 " style="text-align:center">Price</label>
+            <label for="price" class="col-form-label col-md-12 " style="text-align:center">Precio</label>
 
             <div class="col-md-12">
                 <input
@@ -66,7 +66,7 @@
 
 
         <div class="form-group">
-            <label for="image" class="col-form-label col-md-12" style="text-align:center">Image</label>
+            <label for="image" class="col-form-label col-md-12" style="text-align:center">Imagen</label>
 
             <div class="col-md-12">
                 <input id="image" type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image">
@@ -81,7 +81,7 @@
         <div class="form-group" style="text-align:center">
 
         <div class="col-md-12 p-4">
-            <button type="submit" class="btn btn-success pull-right">Update</button>
+            <button type="submit" class="btn btn-success pull-right">Actualizar</button>
         </div>
       </div>
 

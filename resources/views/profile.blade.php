@@ -16,8 +16,8 @@
               <a href="/product" class="opcion-menu" >
                 <li class="list-group-item">VER PRODUCTOS</li>
               </a>
-              <button id="stylesheet1" class=" btn btn-primary">DEFAULT THEME</button>
-              <button id="stylesheet2" class="btn btn-primary">DARK THEME</button>
+              <button id="stylesheet1" class=" btn btn-primary">ESTILO CLARO</button>
+              <button id="stylesheet2" class="btn btn-primary">ESTILO OSCURO</button>
               <br>
               <form class="" action="{{ url('/logout') }}" method="post">
                 {{ csrf_field() }}
@@ -33,7 +33,7 @@
           <div class="row">
             <div class="card-datos col-6">
               <ul >
-                <li><h4><strong> Name:</strong> {{ Auth::user()->name }}</h4></li>
+                <li><h4><strong> Nombre:</strong> {{ Auth::user()->name }}</h4></li>
                 <li><h4> <strong>Email:</strong> {{ Auth::user()->email }}</h4> </li>
               </ul>
             </div>

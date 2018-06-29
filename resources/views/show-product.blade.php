@@ -14,7 +14,7 @@
 					<h5 class="card-title">{{ $product->name }}</h5>
 					<p class="card-text"> $ {{ $product->price }}</p>
 					<p class="card-text">{{ $product->description}}</p>
-					<a href="/product/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
+					<a href="/product/{{$product->id}}/edit" class="btn btn-primary">EDITAR</a>
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">ZOOM</button>
 					<button type="button" class="btn btn-primary" onclick="Back()">VOLVER</button>
 				</div>
@@ -40,7 +40,7 @@
 					@endif
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
 				</div>
 			</div>
 		</div>

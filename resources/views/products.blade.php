@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="container">
-        <a href="/product/create" class="btn btn-primary">CREATE NEW</a>
+        <a href="/product/create" class="btn btn-primary">CREAr NUEVO</a>
         <button type="button" class="btn btn-primary" onclick="Back()">VOLVER</button>
         <table class="table table-striped table-bordered" border="0" width="100%" align="center">
             <thead>
                 <tr style="text-align:center">
-                    <td>Name</td>
-                    <td>Price</td>
-                    <td>Description</td>
-                    <td>Image</td>
+                    <td>Nombre</td>
+                    <td>Precio</td>
+                    <td>Descripción</td>
+                    <td>Imagen</td>
                     <td></td>
                 </tr>
             </thead>
@@ -30,12 +30,12 @@
 
 
                     <td>
-                      <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">EDIT</a>
+                      <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">EDITAR</a>
                         <form method="POST" action="/product/{{$product->id}}">
                           @csrf
                           @method('DELETE')
-                          <button type="submit" class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">DELETE</button>
-                          <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}">VIEW</a>
+                          <button type="submit" class="btn btn-primary btn-sm" href="/product/{{$product->id}}/edit">BORRAR</button>
+                          <a class="btn btn-primary btn-sm" href="/product/{{$product->id}}">VER</a>
                           </form>
                     </td>
                 </tr>

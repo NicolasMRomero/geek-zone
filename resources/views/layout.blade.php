@@ -26,7 +26,7 @@
         <div class="col-lg-5 collapse navbar-collapse" id="navbarSupportedContent" style="text-align:left">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('index') }}">Home</a>
+              <a class="nav-link" href="{{ route('index') }}">Portada</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -49,17 +49,17 @@
             </li>
             @guest
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}" style="">Login</a>
+                <a class="nav-link" href="{{ route('login') }}" style="">Ingresar</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}" style="">Register</a>
+                <a class="nav-link" href="{{ route('register') }}" style="">Registrar</a>
               </li>
             @else
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('profile') }}" style="">Profile</a>
+                <a class="nav-link" href="{{ route('profile') }}" style="">Perfil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/product" style="">My Products</a>
+                <a class="nav-link" href="/product" style="">Mis Productos</a>
               </li>
             @endguest
 
