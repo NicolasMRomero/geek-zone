@@ -143,46 +143,49 @@
 
   var validateName = function(e){
     if (!emptyRegex.test(form.name.value)) {
-      alert('nombre vacio');
+      alert('nombre vacio!');
       e.preventDefault();
     }
   };
 
   var validateEmail = function(e){
     if (!emptyRegex.test(form.email.value)) {
-      alert('email vacio');
+      alert('email vacio!');
       e.preventDefault();
     }
     else if (!emailRegex.test(form.email.value)) {
-      alert('email invalido');
+      alert('email invalido!');
       e.preventDefault();
     }
   };
 
   var validateCountry = function(e){
     if (form.country.value == 0) {
-      alert('country vacio');
+      alert('country vacio!');
       e.preventDefault();
     }
   };
 
   var validatePassword = function(e){
     if (form.password.value == 0) {
-      alert('password vacio');
+      alert('password vacio!');
       e.preventDefault();
     }
   };
 
   var validatePasswordConfirmation = function(e){
-    if (form.password_confirmation.value == 0) {
-      alert('password confirmation vacio');
+    if (form.password_confirmation.value == 0 ) {
+      alert('password confirmation vacio!');
+      e.preventDefault();
+    }else if (form.password.value !== form.password_confirmation.value) {
+      alert('los passwords no coinciden!');
       e.preventDefault();
     }
   };
 
   var validateImage = function(e){
     if (form.image.value == 0) {
-      alert('image vacio');
+      alert('image vacio!');
       e.preventDefault();
     }
   };
