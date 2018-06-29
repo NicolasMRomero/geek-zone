@@ -4,10 +4,10 @@
 
 <div class="container ">
   <div class="row">
-
-    <form method="POST" action="/product" enctype="multipart/form-data" class="col-6 col-sm-offset-2 form-control">
+    <form method="POST" action="/product" enctype="multipart/form-data" class="col-10 col-sm-offset-2 form-control">
         {{ csrf_field() }}
 
+        <h1 style="text-align:center">CREATE PRODUCT</h1>
 
         <div class="form-group">
             <label for="name" class="col-form-label col-md-12" style="text-align:center">Name</label>
@@ -103,6 +103,7 @@
 
         <div class="col-md-12 p-4 " >
             <button type="submit" class="btn btn-success" >Create</button>
+            <button type="button" class="btn btn-success" onclick="Back()">Volver</button>
         </div>
       </div>
 
@@ -110,4 +111,10 @@
   </div>
 </div>
 
+
+<script type="text/javascript">
+function Back() {
+  window.history.back();
+}
+</script>
 @endsection

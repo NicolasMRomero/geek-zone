@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <a href="/product/create" class="btn btn-primary">CREATE NEW</a>
-
+        <button type="button" class="btn btn-success" onclick="Back()">VOLVER</button>
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
@@ -45,4 +45,9 @@
 
         {{ $products->links() }}
     </div>
+    <script type="text/javascript">
+    function Back() {
+      window.history.back();
+    }
+    </script>
 @endsection
