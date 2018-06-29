@@ -166,20 +166,6 @@
     }
   };
 
-  var validateState = function(e){
-    if (form.state.value == 0) {
-      alert('state vacio');
-      e.preventDefault();
-    }
-  };
-
-  var validateCity = function(e){
-    if (form.city.value == 0) {
-      alert('city vacio');
-      e.preventDefault();
-    }
-  };
-
   var validatePassword = function(e){
     if (form.password.value == 0) {
       alert('password vacio');
@@ -205,8 +191,6 @@
     validateName(e);
     validateEmail(e);
     validateCountry(e);
-    validateState(e);
-    validateCity(e);
     validatePassword(e);
     validatePasswordConfirmation(e);
     validateImage(e);
