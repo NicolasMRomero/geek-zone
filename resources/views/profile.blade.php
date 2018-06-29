@@ -8,9 +8,7 @@
        <div class="row">
           <div class="card col-xs-12 col-lg-3 pr-3" style="width: 18rem;">
             <img class="card-img-top imagen-perfil" src="/storage/usuarios/{{ Auth::user()->image }}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="perfil-nombre"></h5>
-            </div>
+            <br>
             <ul class="list-group menu-perfil">
               <a href="/product/create" class="opcion-menu" >
                 <li class="list-group-item ">CREAR PRODUCTO</li>
@@ -41,8 +39,8 @@
             </div>
             <div class="card-datos col-6">
               <ul >
-                <li><h4> <strong>Country:</strong> {{ Auth::user()->country }}</h4></li>
-                <li><h4> <strong>State:</strong> {{ Auth::user()->state }}</h4> </li>
+                <li>
+              </li>
               </ul>
             </div>
           </div>

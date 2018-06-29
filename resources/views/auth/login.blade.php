@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <br>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -65,4 +65,38 @@
         </div>
     </div>
 </div>
+
+<script>
+var form = document.forms[1],
+    elements = form.elements;
+
+var emptyRegex = /^(\w+\S+)$/;
+var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i;
+
+var validateEmail = function(e){
+  if (!emptyRegex.test(form.email.value)) {
+    alert('email vacio');
+    e.preventDefault();
+  }
+  else if (!emailRegex.test(form.email.value)) {
+    alert('email invalido');
+    e.preventDefault();
+  }
+};
+
+var validatePassword = function(e){
+  if (form.password.value == 0) {
+    alert('password vacio');
+    e.preventDefault();
+  }
+};
+
+var validate = function(e){
+  validateEmail(e);
+  validatePassword(e);
+};
+
+form.addEventListener("submit", validate);
+</script>
+
 @endsection
